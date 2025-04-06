@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speed Test</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <h3>Run Speed Test</h3>
+    <button id="runTest">Test Speed</button>
+    <script>
+      document.getElementById('runTest').addEventListener('click', function() {
+        chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+          chrome.tabs.executeScript(tabs[0].id, { file: 'content.js' });
+        });
+      });
+    </script>
+  </body>
+</html>
