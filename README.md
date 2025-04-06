@@ -1,0 +1,1 @@
+A browser extension that monitors the internet speed on fast.com and notifies the user about their connection quality. It works across multiple browsers and provides notifications when the internet speed changes, based on specific thresholds.
